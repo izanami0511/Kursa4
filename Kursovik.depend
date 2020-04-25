@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1587753211 source:/home/izanami/Документы/projects/Kursovik/main.cpp
+	<iostream>
+	"Race.h"
+
+1587569826 source:/home/izanami/Документы/projects/Kursovik/src/Horse.cpp
+	"Horse.h"
+
+1587574245 /home/izanami/Документы/projects/Kursovik/include/Horse.h
+	<iostream>
+
+1587755586 source:/home/izanami/Документы/projects/Kursovik/src/Race.cpp
+	"Race.h"
+
+1587755586 /home/izanami/Документы/projects/Kursovik/include/Race.h
+	<vector>
+	<iostream>
+	"Horse.h"
+	<fstream>
+	<ctime>
+
