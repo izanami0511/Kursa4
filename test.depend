@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1587904957 source:/home/izanami/Документы/projects/test/main.cpp
+	<iostream>
+	"Race.h"
+
+1587906881 /home/izanami/Документы/projects/test/include/Race.h
+	<vector>
+	<iostream>
+	"Horse.hpp"
+	<fstream>
+	<ctime>
+	"Subject.hpp"
+
+1587905099 /home/izanami/Документы/projects/test/include/Horse.hpp
+	<iostream>
+
+1587906881 /home/izanami/Документы/projects/test/include/Subject.hpp
+	<vector>
+
+1587906179 source:/home/izanami/Документы/projects/test/src/Race.cpp
+	"Race.h"
+
