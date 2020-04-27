@@ -1,16 +1,15 @@
 #ifndef CLIENT_H
 #define CLIENT_H
+#include "Observer.hpp"
+#include "Subject.hpp"
 
-
-class Client
+class Client : public Observer
 {
-    public:
-        Client();
-        virtual ~Client();
 
-    protected:
-
-    private:
+public:
+    Client();
+    ~Client();
+    void update(int op);
 };
 
 #endif // CLIENT_H

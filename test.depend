@@ -14,9 +14,15 @@
 1587905099 /home/izanami/Документы/projects/test/include/Horse.hpp
 	<iostream>
 
-1587906881 /home/izanami/Документы/projects/test/include/Subject.hpp
+1587992082 /home/izanami/Документы/projects/test/include/Subject.hpp
 	<vector>
+	<iostream>
 
 1587906179 source:/home/izanami/Документы/projects/test/src/Race.cpp
 	"Race.h"
+
+1587909520 source:/home/izanami/Документы/projects/test/src/Client.cpp
+	"Client.h"
+
+1587978555 /home/izanami/Документы/projects/test/include/Client.h
 

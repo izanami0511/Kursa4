@@ -21,7 +21,9 @@ void _Race::delete_client(){
 }
 
 void _Race::notify_client(){
+    for (int i = 0; i < Subject::client_database.size(); i++){
 
+    }
 }
 
 void _Race::fill_vector(ifstream &file){
@@ -57,16 +59,13 @@ void _Race::main_Race(){
     int no_of_horse = 0;
     cout << "Choose your horse: " << endl;
     for (int i = 0; i < 5; i++){
-        cout << [i + 1] << race[i].nickname << endl;
+        cout << i + 1;
+        cout << race[i].nickname << endl;
     }
     int choice;
 
     cout << "Insert number of Horse: ";
     cin >> choice;
-
-    if (choise == ()i + 1) ){
-        //notify()
-    }
 
     for (int i = 0; i < 5; i++){
         time.push_back(rasst/race[i].speed);
@@ -80,7 +79,13 @@ void _Race::main_Race(){
         }
     }
     cout << no_of_horse + 1 << endl;
+
+    if (choice == (no_of_horse + 1) ){
+        //notify()
+    }
+
 }
+
 
 //bool _Race::win(){
     //
