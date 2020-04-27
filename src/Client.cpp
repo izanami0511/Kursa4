@@ -10,6 +10,6 @@ Client::~Client()
     //dtor
 }
 
-void Client::update(int op){
-        cout << "Client: " << this->Subject::getClientName(op) << "has won the bet!";
+void Client::update(string op){
+        cout << "Client: " << op << "has won the bet!";
 }

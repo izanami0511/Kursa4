@@ -9,7 +9,7 @@ class Client : public Observer
 public:
     Client();
     ~Client();
-    void update(int op);
+    void update(string op);
 };
 
 #endif // CLIENT_H

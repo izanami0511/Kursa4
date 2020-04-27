@@ -3,26 +3,34 @@
 	<iostream>
 	"Race.h"
 
-1587906881 /home/izanami/Документы/projects/test/include/Race.h
+1587997314 /home/izanami/Документы/projects/test/include/Race.h
 	<vector>
 	<iostream>
 	"Horse.hpp"
 	<fstream>
 	<ctime>
 	"Subject.hpp"
+	"Client.h"
 
 1587905099 /home/izanami/Документы/projects/test/include/Horse.hpp
 	<iostream>
 
-1587992082 /home/izanami/Документы/projects/test/include/Subject.hpp
+1587997323 /home/izanami/Документы/projects/test/include/Subject.hpp
 	<vector>
 	<iostream>
+	<Observer.hpp>
+	<Client.h>
 
 1587906179 source:/home/izanami/Документы/projects/test/src/Race.cpp
 	"Race.h"
 
-1587909520 source:/home/izanami/Документы/projects/test/src/Client.cpp
+1587994587 source:/home/izanami/Документы/projects/test/src/Client.cpp
 	"Client.h"
 
-1587978555 /home/izanami/Документы/projects/test/include/Client.h
+1587994557 /home/izanami/Документы/projects/test/include/Client.h
+	"Observer.hpp"
+	"Subject.hpp"
+
+1587996712 /home/izanami/Документы/projects/test/include/Observer.hpp
+	<string>
 

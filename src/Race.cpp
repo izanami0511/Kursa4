@@ -10,11 +10,9 @@ _Race::~_Race()
     race.clear();
 }
 
-void _Race::add_client(){
-    string tmp;
-    cout << "Client : ";
-    cin >> tmp;
-    client_database.push_back(tmp);
+void _Race::add_client(Observer *op){
+    client_database.push_back(op);
+
 }
 void _Race::delete_client(){
     client_database.pop_back();
@@ -22,7 +20,7 @@ void _Race::delete_client(){
 
 void _Race::notify_client(){
     for (int i = 0; i < Subject::client_database.size(); i++){
-
+        Client::update(client_database[i]);
     }
 }
 

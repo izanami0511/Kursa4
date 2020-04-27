@@ -6,6 +6,7 @@
 #include <fstream>
 #include <ctime>
 #include "Subject.hpp"
+#include "Client.h"
 
 using namespace std;
 
@@ -18,7 +19,7 @@ class _Race : public Subject
         _Race();
         ~_Race();
 
-        void add_client();
+        void add_client(Observer *op);
         void notify_client();
         void delete_client();
 
