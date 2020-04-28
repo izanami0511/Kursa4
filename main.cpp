@@ -1,15 +1,18 @@
 #include <iostream>
 #include "Race.h"
 
+
 using namespace std;
 
 int main()
 {
     ifstream fin("in_horse.txt");
-    _Race teest;
-    teest.fill_vector(fin);
-    teest.test_print();
-    teest.main_Race();
+    _Race a;
+    //Observer *b;
+    Observer *b = new Client;
+    a.fill_vector(fin);
+    //a.add_client(b);
+    a.main_Race(b);
     return 0;
 
 }

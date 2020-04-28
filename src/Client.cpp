@@ -2,7 +2,7 @@
 
 Client::Client()
 {
-    //ctor
+    cout << "Hello!";
 }
 
 Client::~Client()

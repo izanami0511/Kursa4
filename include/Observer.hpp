@@ -7,9 +7,12 @@ class Observer {
 protected:
      string person_name;
 public:
-    virtual void update() = 0;
+    virtual void update(string op) = 0;
     string getname(){
         return person_name;
+    }
+    void setname(string op){
+        person_name = op;
     }
 };
 

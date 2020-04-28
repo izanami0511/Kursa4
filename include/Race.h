@@ -20,12 +20,12 @@ class _Race : public Subject
         ~_Race();
 
         void add_client(Observer *op);
-        void notify_client();
+        void notify_client(Observer *op);
         void delete_client();
 
         void fill_vector(ifstream &file);
         void test_print();
-        void main_Race();
+        void main_Race(Observer *op);
         bool win();
 };
 #endif // RACE_H

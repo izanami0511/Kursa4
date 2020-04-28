@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1587904957 source:/home/izanami/Документы/projects/test/main.cpp
+1588074799 source:/home/izanami/Документы/projects/test/main.cpp
 	<iostream>
 	"Race.h"
 
-1587997314 /home/izanami/Документы/projects/test/include/Race.h
+1588071746 /home/izanami/Документы/projects/test/include/Race.h
 	<vector>
 	<iostream>
 	"Horse.hpp"
@@ -15,22 +15,23 @@
 1587905099 /home/izanami/Документы/projects/test/include/Horse.hpp
 	<iostream>
 
-1587997323 /home/izanami/Документы/projects/test/include/Subject.hpp
+1588071006 /home/izanami/Документы/projects/test/include/Subject.hpp
 	<vector>
 	<iostream>
 	<Observer.hpp>
 	<Client.h>
 
-1587906179 source:/home/izanami/Документы/projects/test/src/Race.cpp
+1588075433 source:/home/izanami/Документы/projects/test/src/Race.cpp
 	"Race.h"
 
-1587994587 source:/home/izanami/Документы/projects/test/src/Client.cpp
+1588075874 source:/home/izanami/Документы/projects/test/src/Client.cpp
 	"Client.h"
 
-1587994557 /home/izanami/Документы/projects/test/include/Client.h
+1588075402 /home/izanami/Документы/projects/test/include/Client.h
+	<iostream>
 	"Observer.hpp"
 	"Subject.hpp"
 
-1587996712 /home/izanami/Документы/projects/test/include/Observer.hpp
+1588075470 /home/izanami/Документы/projects/test/include/Observer.hpp
 	<string>
 

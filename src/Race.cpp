@@ -11,6 +11,9 @@ _Race::~_Race()
 }
 
 void _Race::add_client(Observer *op){
+    string h;
+    cin >> h;
+    op->setname(h);
     client_database.push_back(op);
 
 }
@@ -18,9 +21,9 @@ void _Race::delete_client(){
     client_database.pop_back();
 }
 
-void _Race::notify_client(){
+void _Race::notify_client(Observer *op){
     for (int i = 0; i < Subject::client_database.size(); i++){
-        Client::update(client_database[i]);
+        op->update(client_database[i]->getname());
     }
 }
 
@@ -51,7 +54,7 @@ void _Race::test_print(){
         cout << race[i].speed << endl;
     }
 }
-void _Race::main_Race(){
+void _Race::main_Race(Observer *op){
     vector<int> time;
     int winner = 0;
     int no_of_horse = 0;
@@ -79,7 +82,10 @@ void _Race::main_Race(){
     cout << no_of_horse + 1 << endl;
 
     if (choice == (no_of_horse + 1) ){
-        //notify()
+        this->notify_client(op);
+    }
+    else {
+        cout << "Your horse didn't win." << endl;
     }
 
 }
