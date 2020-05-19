@@ -41,7 +41,7 @@ void _Race::fill_vector(ifstream &file){
         getline(file,h);
         race[i].year_birthday = h;
         getline(file,h);
-        race[i].wins = 10;
+        race[i].wins = 0;
         race[i].speed = rand() % 20 + 45;
     }
 }
@@ -80,7 +80,7 @@ void _Race::main_Race(Observer *op){
         }
     }
     cout << no_of_horse + 1 << endl;
-
+    race[no_of_horse].wins += 1;
     if (choice == (no_of_horse + 1) ){
         this->notify_client(op);
     }
@@ -90,7 +90,8 @@ void _Race::main_Race(Observer *op){
 
 }
 
-
-//bool _Race::win(){
-    //
-//}
+void _Race::file_print(){
+    unsigned int file_number = 1;
+    ofstream fout(to_string(file_number));
+    fout << "Hello!";
+}

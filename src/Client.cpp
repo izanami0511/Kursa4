@@ -2,7 +2,8 @@
 
 Client::Client()
 {
-    cout << "Hello!";
+    cout << "Hello!" << endl
+    << "Enter your name: ";
 }
 
 Client::~Client()
@@ -11,5 +12,5 @@ Client::~Client()
 }
 
 void Client::update(string op){
-        cout << "Client: " << op << "has won the bet!";
+        cout << "Client: " << op << " has won the bet!";
 }

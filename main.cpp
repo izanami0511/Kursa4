@@ -11,8 +11,9 @@ int main()
     //Observer *b;
     Observer *b = new Client;
     a.fill_vector(fin);
-    //a.add_client(b);
+    a.add_client(b);
     a.main_Race(b);
+    a.file_print();
     return 0;
 
 }
