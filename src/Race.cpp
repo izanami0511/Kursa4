@@ -3,6 +3,9 @@
 _Race::_Race()
 {
     rasst = 1000;
+    number_of_winner = 0;
+    number_of_races = 0;
+    number_of_files = 1;
 }
 
 _Race::~_Race()
@@ -60,7 +63,7 @@ void _Race::main_Race(Observer *op){
     int no_of_horse = 0;
     cout << "Choose your horse: " << endl;
     for (int i = 0; i < 5; i++){
-        cout << i + 1;
+        cout << i + 1 << " ";
         cout << race[i].nickname << endl;
     }
     int choice;
@@ -80,6 +83,7 @@ void _Race::main_Race(Observer *op){
         }
     }
     cout << no_of_horse + 1 << endl;
+    number_of_winner = no_of_horse;
     race[no_of_horse].wins += 1;
     if (choice == (no_of_horse + 1) ){
         this->notify_client(op);
@@ -87,11 +91,26 @@ void _Race::main_Race(Observer *op){
     else {
         cout << "Your horse didn't win." << endl;
     }
-
+    number_of_races += 1;
+    // переопредление скоростей
+    for (int i = 0; i < 5; i++){
+        race[i].speed = rand() % 20 + 45;
+    }
 }
 
 void _Race::file_print(){
-    unsigned int file_number = 1;
-    ofstream fout(to_string(file_number));
-    fout << "Hello!";
+    if(number_of_races % 6 == 0){
+        number_of_files += 1;
+        ofstream fout(to_string(number_of_files), ios_base::app);
+    }
+
+    ofstream fout(to_string(number_of_files), ios_base::app);
+    fout << "The Horse that won: " << endl;
+    fout << "Breed: " << race[number_of_winner].breed << endl;
+    fout << "Nickname: "<< race[number_of_winner].nickname << endl;
+    fout << "Year oof birth: "<< race[number_of_winner].year_birthday << endl;
+    fout << "Number of wins: "<< race[number_of_winner].wins << endl;
+    fout << "Speed of horse: "<< race[number_of_winner].speed << endl;
+    fout << endl;
+    number_of_winner = 0;
 }

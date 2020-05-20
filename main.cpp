@@ -8,12 +8,10 @@ int main()
 {
     ifstream fin("in_horse.txt");
     _Race a;
-    //Observer *b;
+    int menu_choise = 0;
+    cout << "Register yourself" << endl;
     Observer *b = new Client;
-    a.fill_vector(fin);
     a.add_client(b);
-    a.main_Race(b);
-    a.file_print();
     return 0;
 
 }

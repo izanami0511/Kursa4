@@ -14,7 +14,10 @@ using namespace std;
 class _Race : public Subject
 {
     vector<Horse> race;
-    int rasst = 1000;
+    int rasst;
+    int number_of_winner;
+    int number_of_races;
+    int number_of_files;
 
     public:
         _Race();
