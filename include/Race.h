@@ -8,6 +8,8 @@
 #include <ctime>
 #include "Subject.hpp"
 #include "Client.h"
+#include <ctype.h>
+
 
 using namespace std;
 
@@ -31,5 +33,6 @@ class _Race : public Subject
         void test_print();
         void main_Race(Observer *op);
         void file_print();
+        int get_Races();
 };
 #endif // RACE_H

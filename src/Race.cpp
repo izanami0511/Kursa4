@@ -21,18 +21,37 @@ void _Race::add_client(Observer *op){
 
 }
 void _Race::delete_client(){
-    client_database.pop_back();
+    try{
+        if(client_database.size() == 0)
+            throw 666;
+        client_database.pop_back();
+        cout << "Last added client was deleted." << endl;
+    }
+    catch(int i){
+        cout << "There is no one to delete!" << endl;
+    }
 }
 
 void _Race::notify_client(Observer *op){
+     try{
+        if(client_database.size() == 0)
+            throw 666;
     for (int i = 0; i < Subject::client_database.size(); i++){
         op->update(client_database[i]->getname());
+        }
+    }
+    catch(int i){
+        cout << "There is no one to delete!" << endl;
     }
 }
 
 void _Race::fill_vector(ifstream &file){
     Horse temp;
     srand ( time(NULL) );
+
+    try{
+        if(!(file.is_open()))
+            throw 666;
 
     for (int i = 0; i < 5; i++){
         race.push_back(temp);
@@ -46,6 +65,10 @@ void _Race::fill_vector(ifstream &file){
         getline(file,h);
         race[i].wins = 0;
         race[i].speed = rand() % 20 + 45;
+        }
+    }
+    catch(int i){
+        cout << "File isn't open or empty!" << endl;
     }
 }
 void _Race::test_print(){
@@ -67,10 +90,8 @@ void _Race::main_Race(Observer *op){
         cout << race[i].nickname << endl;
     }
     int choice;
-
     cout << "Insert number of Horse: ";
     cin >> choice;
-
     for (int i = 0; i < 5; i++){
         time.push_back(rasst/race[i].speed);
     }
@@ -105,6 +126,7 @@ void _Race::file_print(){
     }
 
     ofstream fout(to_string(number_of_files), ios_base::app);
+    fout << "Race number: " << number_of_races + 1;
     fout << "The Horse that won: " << endl;
     fout << "Breed: " << race[number_of_winner].breed << endl;
     fout << "Nickname: "<< race[number_of_winner].nickname << endl;
@@ -113,4 +135,8 @@ void _Race::file_print(){
     fout << "Speed of horse: "<< race[number_of_winner].speed << endl;
     fout << endl;
     number_of_winner = 0;
+
 }
+
+
+

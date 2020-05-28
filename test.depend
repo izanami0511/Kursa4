@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1589975553 source:/home/izanami/Документы/projects/test/main.cpp
+1590151400 source:/home/izanami/Документы/projects/test/main.cpp
 	<iostream>
 	"Race.h"
 
-1589975195 /home/izanami/Документы/projects/test/include/Race.h
+1590153178 /home/izanami/Документы/projects/test/include/Race.h
 	<vector>
 	<iostream>
 	"Horse.hpp"
@@ -12,6 +12,7 @@
 	<ctime>
 	"Subject.hpp"
 	"Client.h"
+	<ctype.h>
 
 1587905099 /home/izanami/Документы/projects/test/include/Horse.hpp
 	<iostream>
@@ -22,7 +23,7 @@
 	<Observer.hpp>
 	<Client.h>
 
-1589998330 source:/home/izanami/Документы/projects/test/src/Race.cpp
+1590153174 source:/home/izanami/Документы/projects/test/src/Race.cpp
 	"Race.h"
 
 1589813531 source:/home/izanami/Документы/projects/test/src/Client.cpp
